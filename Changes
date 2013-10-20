@@ -1,5 +1,9 @@
 Revision history for Text-NumericData
 
+2.000002
+	- Fix documentation for mentioning the correct list of shortcuts
+	  in txdcalc (only x, y and z).
+
 2.000001
 	- inevitable documentation fix, finishing off a sentence
 

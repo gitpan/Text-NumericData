@@ -14,14 +14,16 @@ Usage:
 	pipe | txdcalc <options> [--] <formula;formula;formula...> [files] | pipe
 
 It takes STDIN as primary data source and the files as secondary sources. Operation is line-wise in and out. So, this program is just a filter for data in ASCII files with quite some freedom in manipulating the data.
-About formulae: It is Perl, mostly. The variables (elements of corresponding rows) are denoted [n,m] in general. n is the file number (0 is the data from STDIN) and m the column (starting at 1). Short form [m] means implicitly n=0. Also there are $a or simply a meaning [0,2] and $b or b meaning [1,2] as are $ord, $x or x for [0,1] and $y or y for [0,2]. If you are confused by these shortcuts, then just do not use them;-)
+About formula syntax:
+It is Perl, mostly. The variables (elements of corresponding rows) are denoted [n,m] in general. n is the file number (0 is the data from STDIN) and m the column (starting at 1). Short form [m] means implicitly n=0. Also there are $x or x for [0,1],  $y or y for [0,2] and $z for [0,3].
+
 Additionally there are two arrays: A0, A1, A2, ... and C0, C1, C2, ... in the formula or references $A and $C in the plain Perl code. Both arrays are usable as you like (global scope) with the difference that @C gets initialized via the const parameter. Apart from the special syntax added here you can just use Perl to build advanced expressions, so that
 
 	[3] = [1,2] != 0 ? [2]/[1,2] : 0
 
 catches the division by zero. You can switch to plain Perl syntax, too (see --plainperl).
 
-To discard a data line, place a "return 1" (or some other true -- not 0 or undefined -- value):
+To discard a data line, place a "return 1" (or some other true --- not 0 or undefined --- value):
 
 	return 1 if [3] != 85000;
 

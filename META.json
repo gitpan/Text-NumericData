@@ -37,7 +37,7 @@
    "provides" : {
       "Text::NumericData" : {
          "file" : "lib/Text/NumericData.pm",
-         "version" : "2.000001"
+         "version" : "2.000002"
       },
       "Text::NumericData::App" : {
          "file" : "lib/Text/NumericData/App.pm",
@@ -130,5 +130,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "2.000001"
+   "version" : "2.000002"
 }

@@ -600,7 +600,7 @@ sub calc
 sub delete_rows
 {
 	my $self = shift;
-	my $delist = shift
+	my $delist = shift;
 	return unless defined $delist;
 	my @delis = sort {$a <=> $b} @{$delist};
 	while(@delis and $delis[0]<0){ shift(@delis); }

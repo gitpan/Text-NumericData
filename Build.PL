@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
     },
     requires => {
          'perl' => 5.006
+        ,'Math::Spline' => 0
         ,'Text::ASCIIPipe' => 1.001000
         ,'Config::Param' => 3.000000
         ,'Storable' => 0

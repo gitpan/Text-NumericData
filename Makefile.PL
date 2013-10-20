@@ -32,6 +32,7 @@ WriteMakefile
                    'File::Compare' => 0,
                    'Config::Param' => '3',
                    'Storable' => 0,
+                   'Math::Spline' => 0,
                    'Text::ASCIIPipe' => '1.001'
                  }
 )

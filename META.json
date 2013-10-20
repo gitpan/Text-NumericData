@@ -28,6 +28,7 @@
       "runtime" : {
          "requires" : {
             "Config::Param" : "3",
+            "Math::Spline" : "0",
             "Storable" : "0",
             "Text::ASCIIPipe" : "1.001",
             "perl" : "5.006"
@@ -37,7 +38,7 @@
    "provides" : {
       "Text::NumericData" : {
          "file" : "lib/Text/NumericData.pm",
-         "version" : "2.000002"
+         "version" : "2.000003"
       },
       "Text::NumericData::App" : {
          "file" : "lib/Text/NumericData/App.pm",
@@ -130,5 +131,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "2.000002"
+   "version" : "2.000003"
 }

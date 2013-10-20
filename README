@@ -78,12 +78,13 @@ perldoc command.
 
 	perldoc Text::NumericData
 
-The installed scripts with the prefix txd also feature POD and give the
-same information interactively, for example txdcalc with
+The installed scripts with the prefix txd also feature POD, which is installed
+as man-pages and give the same information interactively, for example txdcalc
+with
 
 	txdcalc --help
 
-To get started with an idea on how 
+Have fun.
 
 =head1 LICENSE AND COPYRIGHT
 

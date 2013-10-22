@@ -23,7 +23,7 @@ ok( txdtest([@defcon, '-N=.3f', '--lineend=UNIX', '--byrow', '[1]*=0.5*([1,1]+[2
 open($indata_h, '>', \$indata);
 $consapp->run([@defcon, '-n=100', '[1]=0.1*C0'], undef, $indata_h);
 close($indata_h);
-ok( txdtest([@defcon, '-N=.3f', '--lineend=UNIX', '--bycol=1', '--interpolate=linear', '[2]=[1,2]', "$prefix/calc3ref.dat"], 'calc3.dat'), 'linear interpolation' );
+ok( txdtest([@defcon, '-N=.1f', '-N.=.4f', '--lineend=UNIX', '--bycol=1', '--interpolate=linear', '[2]=[1,2]', "$prefix/calc3ref.dat"], 'calc3.dat'), 'linear interpolation' );
 
 open($indata_h, '>', \$indata);
 $consapp->run([@defcon, '-n=100', '[1]=C2'], undef, $indata_h);

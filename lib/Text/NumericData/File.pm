@@ -280,14 +280,22 @@ sub write_all
 
 	Text::ASCIIPipe::file_begin($handle) if($self->{config}{pipemode});
 	#header
-	$self->write_header($handle, $selection);
+	$self->write_head($handle, $selection);
 	#data
 	$self->write_data($handle, $selection);
 	Text::ASCIIPipe::file_end($handle) if($self->{config}{pipemode});
 	return 1; # real error checking?
 }
 
+# An inconsistency in first release was write_header, not write_head,
+# as it matches read_head. Providing this wrapper now.
 sub write_header
+{
+	my $self = shift; # No real need to shift here, but keeping in style.
+	return $self->write_head(@_);
+}
+
+sub write_head
 {
 	my $self = shift;
 	my $handle = shift;
@@ -711,7 +719,7 @@ This wraps around pipe operation using L<Text::ASCIIPipe>. The return codes are 
 
 writes the header and all data or columns in @selection to $file (use WriteFile(undef, \@selection) to write to the internally remembered output file from a previous run).
 
-=item * write_header($handle, \@selection)
+=item * write_head($handle, \@selection)
 
 writes a header to file handle $handle, tries to provide the appropriate column titles as last line when @selection is defined. Apart from this possibly constructed last line the header here is just the raw header read from the input file - including the original column titles if they were there.
 

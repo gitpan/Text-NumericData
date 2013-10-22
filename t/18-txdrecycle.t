@@ -9,7 +9,7 @@ my @defcon = ("--config=testdata/default.conf");
 
 my $app = Text::NumericData::App::txdrecycle->new();
 
-ok( txdtest([@defcon, '--lineend=UNIX', '-c=1', '-s=5'], 'flow.dat', 'flow-cycle.dat'), 'x shift');
+ok( txdtest([@defcon, '--lineend=UNIX', '-c=1', '-s=5', '-N=.3f'], 'flow.dat', 'flow-cycle.dat'), 'x shift');
 
 sub txdtest
 {

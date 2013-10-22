@@ -1,5 +1,10 @@
 Revision history for Text-NumericData
 
+2.000004
+	- Fix output format of txdrecycle test to avoide false negatives.
+	- Change format of first txdcalc linear interpolation test to avoid
+	  sensitivity to rounding mode. Should have chosen less regular input.
+
 2.000003
 	- A missing semicolon that broke the code on many installs of Perl
 	  (but not mine, for a strange reason) got added.

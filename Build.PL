@@ -19,6 +19,13 @@ my $builder = Module::Build->new(
         ,'Config::Param' => 3.000000
         ,'Storable' => 0
     },
+    resources => {
+        repository => {
+             url => 'svn://scm.orgis.org/thor/text-numericdata'
+            ,web => 'http://scm.orgis.org/view/thor/text-numericdata'
+            ,type => 'svn'
+        }
+    },
     add_to_cleanup      => [ 'Text-NumericData-*' ],
     create_makefile_pl => 'traditional',
     script_files => [ glob('script/txd*') ]

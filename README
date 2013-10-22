@@ -47,7 +47,8 @@ which produces this content:
 	1.000	-0.000
 
 Care has been taken to enable transparent handling of files with differing
-line endings (DOS and UNIX, theoretically old-style Mac, too) independent of
+line endings (DOS and UNIX, theoretically old-style Mac, too, but only on
+old-style Macs) independent of
 the current platform. The rule is that output shares the line end of the input,
 unless you override it on the command line.
 

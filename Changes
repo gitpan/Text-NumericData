@@ -1,5 +1,9 @@
 Revision history for Text-NumericData
 
+2.001000
+	- Correct defaults for txdinfo (--strict was on, which differed from the
+	  rest). This changes non-buggy behaviour, so bump at least a minor version.
+
 2.000004
 	- Fix output format of txdrecycle test to avoide false negatives.
 	- Change format of first txdcalc linear interpolation test to avoid

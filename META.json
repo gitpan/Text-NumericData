@@ -1,5 +1,5 @@
 {
-   "abstract" : "Parsing and writing of textual numeric data files",
+   "abstract" : "parsing and writing of textual numeric data files",
    "author" : [
       "Thomas Orgis <thomas@orgis.org>"
    ],
@@ -38,7 +38,7 @@
    "provides" : {
       "Text::NumericData" : {
          "file" : "lib/Text/NumericData.pm",
-         "version" : "2.000004"
+         "version" : "2.001000"
       },
       "Text::NumericData::App" : {
          "file" : "lib/Text/NumericData/App.pm",
@@ -131,5 +131,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "2.000004"
+   "version" : "2.001000"
 }

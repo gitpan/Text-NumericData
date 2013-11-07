@@ -6,7 +6,7 @@ use Storable qw(dclone);
 
 # major.minor.bugfix, the latter two with 3 digits each
 # It's not pretty, but I gave up on 1.2.3 style.
-our $VERSION = '2.000004';
+our $VERSION = '2.001000';
 our $version = $VERSION;
 $VERSION = eval $VERSION;
 
@@ -506,7 +506,7 @@ __END__
 
 =head1 NAME
 
-Text::NumericData - Parsing and writing of textual numeric data files
+Text::NumericData - parsing and writing of textual numeric data files
 
 =head1 SYNOPSIS
 

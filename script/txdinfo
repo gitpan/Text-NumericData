@@ -18,16 +18,18 @@ use Config::Param;
 use Text::NumericData;
 use Text::ASCIIPipe;
 
+my $default = \%Text::NumericData::defaults;
+my $help =  \%Text::NumericData::help;
 my $param = {};
 my @pars = 
 (
-		'strict',1,'S','use strict syntax (also faster)',
-		'text',1,'T','allow some text as data',
-		'black',0,'B','ignore whitespace at beginning and end of line (non-strict mode)'
-		,'findcol','','c','find a column by name'
-		,'cols',0,'','print number of columns only'
-		,'coltitles',0,'','extract the column title line'
-		,'coltitle',0,'','print title of specified column'
+  'strict', $default->{strict},'S', $help->{strict}
+, 'text',   $default->{text},  'T', $help->{text}
+, 'black',  $default->{black}, 'B', $help->{black}
+, 'findcol','','c','find a column by name'
+, 'cols',0,'','print number of columns only'
+, 'coltitles',0,'','extract the column title line'
+, 'coltitle',0,'','print title of specified column'
 );
 
 
